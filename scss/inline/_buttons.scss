@@ -1,0 +1,73 @@
+/* CSS Document */
+$red: #f13950;
+$purple: #464a99;
+$gray: #5c6770;
+$text-gray: #354049;
+$white: #ffffff;
+
+.btn-container {
+	-webkit-border-radius: 4px; 
+	-moz-border-radius: 4px; 
+	border-radius: 4px;
+}
+
+.btn {
+	font-size: 12px; 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	text-decoration: none; 
+	border-radius: 4px; 
+	padding: 12px 22px; 
+	display: inline-block; 
+	text-transform:uppercase; 
+	font-weight:500; 
+	letter-spacing: 1px;
+	
+	&.btn-red {
+		color: $white;
+		border: 0px solid $white;
+		background-color: $red;
+	}
+	
+	&.btn-red-border {
+		color: $text-gray;
+		border: 1px solid $red;
+		background-color: $white;
+	}
+	
+	&.btn-purple {
+		color: $white;
+		border: 0px solid $white;
+		background-color: $purple;
+	}
+	
+	&.btn-purple-border {
+		color: $text-gray;
+		border: 1px solid $purple;
+		background-color: $white;
+	}
+	
+	&.btn-gray {
+		color: $white;
+		border: 0px solid $white;
+		background-color: $gray;
+	}
+	
+	&.btn-gray-border {
+		color: $text-gray;
+		border: 1px solid $gray;
+		background-color: $white;
+	}
+	
+	&.btn-transparent {
+		color: $white; 
+		border: 1px solid $white; 
+		background-color: transparent;
+	}
+	
+	&.btn-editable {
+		color: inherit; 
+		border: inherit; 
+		background-color: inherit;
+	}
+	
+}

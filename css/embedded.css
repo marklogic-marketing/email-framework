@@ -1,0 +1,30 @@
+/* RESPONSIVE ENHANCEMENT */
+/*Media Queries*/
+@media screen and (max-width: 600px) {
+  .mobile-hide {
+    display: none !important; }
+  .mobile-left {
+    text-align: left !important; }
+  .mobile-center {
+    text-align: center !important; }
+  .mobile-right {
+    text-align: right !important; }
+  .outer-padding {
+    padding: 0 !important; }
+  .hero-padding {
+    padding: 0 15px !important; }
+  .left-right-inner-padding {
+    padding: 30px 15px 0 15px !important; }
+  .left-right-outer-padding {
+    padding: 30px 0 !important; } }
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 26px !important;
+    line-height: 28px !important; }
+  h2 {
+    font-size: 22px !important;
+    line-height: 24px !important; }
+  h3 {
+    font-size: 18px !important;
+    line-height: 20px !important; } }
