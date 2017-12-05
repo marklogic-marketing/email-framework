@@ -1,0 +1,75 @@
+﻿# ignore node modules
+node_modules
+
+# ignore certain files
+*.swp
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.7z
+
+# ignore compiled files
+*.class
+*.dll
+*.exe
+*.app
+*.o
+*.so
+
+# system files
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+.svn
+.cvs
+*.bak
+*.swp
+
+.htaccess
+
+# ignore Sass cache
+.sass-cache
+.sass-cache/*
+images/*
+
+# large/disallowed file types
+# a CDN should be used for these
+*.hqx
+*.bin
+*.exe
+*.dll
+*.deb
+*.dmg
+*.iso
+*.img
+*.msi
+*.msp
+*.msm
+*.mid
+*.midi
+*.kar
+*.mp3
+*.ogg
+*.m4a
+*.ra
+*.3gpp
+*.3gp
+*.mp4
+*.mpeg
+*.mpg
+*.mov
+*.webm
+*.flv
+*.m4v
+*.mng
+*.asx
+*.asf
+*.wmv
+*.avi
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
