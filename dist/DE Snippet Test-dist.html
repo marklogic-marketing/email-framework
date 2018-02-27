@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
 
 <!-- Marketo Variable Definitions -->
 	<!-- Global Variables -->
@@ -60,6 +62,9 @@
 	<meta class="mktoImg" id="bottomHeroImg" mktoname="Bottom Hero Image" default="http://placehold.it/400x180" mktomodulescope="true">
 	<meta class="mktoNumber" id="bottomHeroWidth" mktoname="Width of the Bottom Hero Image" default="400" min="50" max="600" step="1" mktomodulescope="true">
 	<meta class="mktoString" id="bottomHeroImgAlt" mktoname="Bottom Hero Image Alt Code" default="MarkLogic" mktomodulescope="true">
+	
+	<!-- Left Aligned Module -->
+	<meta class="mktoBoolean" id="showSnippet" mktoname="Show Snippet?" default="false" true_value="-->" false_value="" true_value_name="YES" false_value_name="NO" mktomodulescope="true">
 	
 	<!-- Standalone Image Module -->
 	<meta class="mktoImg" id="standaloneImg" mktoname="Bottom Hero Image" default="http://placehold.it/400x180" mktomodulescope="true">
@@ -185,7 +190,7 @@ li {
 													<table width="100%" cellpadding="0" cellspacing="0">
 														<tr>
 															<td align="center" style="margin: 0; padding:0;font-family:Arial,Helvetica,sans-serif;font-size:8.5px;color:#a3aaae;mso-line-height-rule:exactly; mso-text-raise: 3px; line-height:20px; padding-top: 2px; text-align:left; text-transform:uppercase; letter-spacing: 1px;">
-																<a href="{{system.viewAsWebpageLink}}" style="color: #a3aaae;"><strong style="color: #a3aaae; text-decoration: none; font-weight: normal;">web&#12506;&#12540;&#12472;&#12392;&#12375;&#12390;&#34920;&#31034;</strong></a>
+																<a href="{{system.viewAsWebpageLink}}" style="color: #a3aaae;">Ansicht als Web-Seite</a>
 															</td>
 														</tr>
 													</table>
@@ -201,7 +206,7 @@ li {
 													<table width="100%" cellpadding="0" cellspacing="0">
 														<tr>
 															<td align="center" style="margin:0; padding: 0; font-family: Helvetica,Arial,sans-serif;font-size:8.5px;color:#a3aaae;mso-line-height-rule:exactly; mso-text-raise: 3px; line-height:20px; text-align: right; text-transform:uppercase; letter-spacing: 1px; padding-top: 2px;">
-																<a href="{{system.forwardToFriendLink}}" style="color: #a3aaae;"><strong style="color: #a3aaae; text-decoration: none; font-weight: normal;">&#36578;&#36865;&#12375;&#12390;&#20849;&#26377; &rsaquo;</strong></a>
+																<a href="{{system.forwardToFriendLink}}" style="color: #a3aaae;">Nachricht weiterleiten &rsaquo;</a>
 															</td>
 														</tr>
 													</table>
@@ -239,7 +244,7 @@ li {
 												<table align="left" cellpadding="0" cellspacing="0">
 													<tr>
 														<td width="110" align="left" style="padding-left: 15px; width: 110px;">
-															<a href="http://jp.marklogic.com/" style="text-decoration: none;">
+															<a href="http://de.marklogic.com/" style="text-decoration: none;">
 																<img src="http://info.marklogic.com/rs/371-XVQ-609/images/marklogic-logo-220x44.png" width="110" alt="MarkLogic Logo" border="0" style="width:100%!important;height:auto!important;float:left;">
 																<!--[if gt mso 15]><p style="margin:0; padding: 0; font-size: 1px; line-height: 1px; color:white;">&nbsp;</p><![endif]-->
 															</a>
@@ -307,7 +312,7 @@ li {
                                        	     				<table border="0" cellspacing="0" cellpadding="0" align="center">
                                               				<tr>
                                                 				<td class="btn-container" align="center" bgcolor="${buttonFill}" style="-webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;">
-                                                  				<a href="${buttonLink}" target="_blank" style="color: ${buttonText}; border: 1px solid ${buttonBorder}; font-size: 12px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 4px; padding: 12px 22px; display: inline-block; text-transform:uppercase; font-weight:normal; letter-spacing: 1px;"><strong style="text-decoration:none; color: ${buttonText}; font-weight: normal;">${buttonCTA}</strong></a>
+                                                  				<a href="${buttonLink}" target="_blank" style="color: ${buttonText}; border: 1px solid ${buttonBorder}; font-size: 12px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 4px; padding: 12px 22px; display: inline-block; text-transform:uppercase; font-weight:normal; letter-spacing: 1px;">${buttonCTA}</a>
 																													<!--[if gt mso 15]><span style="margin:0; padding: 0; font-size: 1px; line-height: 1px; color:white;">&nbsp;</span><![endif]${showButton}
                                                   			</td>
                                                 			</tr>
@@ -409,7 +414,7 @@ li {
                                             	<table border="0" cellspacing="0" cellpadding="0" align="center">
                                               	<tr>
                                                 	<td class="btn-container" align="center" bgcolor="${buttonFill}" style="-webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;">
-                                                  	<a href="${buttonLink}" target="_blank" style="color: ${buttonText}; border: 1px solid ${buttonBorder}; font-size: 12px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 4px; padding: 12px 22px; display: inline-block; text-transform:uppercase; font-weight:normal; letter-spacing: 1px;"><strong style="text-decoration:none; color: ${buttonText}; font-weight: normal;">${buttonCTA}</strong></a>
+                                                  	<a href="${buttonLink}" target="_blank" style="color: ${buttonText}; border: 1px solid ${buttonBorder}; font-size: 12px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 4px; padding: 12px 22px; display: inline-block; text-transform:uppercase; font-weight:normal; letter-spacing: 1px;">${buttonCTA}</a>
 																										<!--[if gt mso 15]><span style="margin:0; padding: 0; font-size: 1px; line-height: 1px; color:white;">&nbsp;</span><![endif]${showButton}
                                                   </td>
                                                 </tr>
@@ -520,7 +525,7 @@ li {
 																		<td class="left mobile-center left-right-inner-padding" style="text-align: left; padding: 30px 15px;">
 																		  <div class="mktoText" id="rightText" mktoname="Right Adjusted Text">
 																			<h3 class="left mobile-center" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 23px; font-weight: 600; margin-bottom: 11px; color: #333e48; text-align: left;">Marketplace &amp; Data Services&nbsp;Hub</h3>
-																				<p class="left mobile-center half-margin " style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; text-align: left; margin-bottom: 11px;">HealthCare.gov provides access to health coverage for millions of Americans - integrating dozens of data sources and handling hundreds of thousands of concurrent users.</p><p class="no-margin left mobile-center" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; text-align: left; margin-bottom: 0px;"><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;"><strong class="cta" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</strong></a></p>
+																				<p class="left mobile-center half-margin " style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; text-align: left; margin-bottom: 11px;">HealthCare.gov provides access to health coverage for millions of Americans - integrating dozens of data sources and handling hundreds of thousands of concurrent users.</p><p class="no-margin left mobile-center" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; text-align: left; margin-bottom: 0px;"><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</a></p>
 																			</div>
 																		</td>
 																	</tr>
@@ -583,7 +588,7 @@ li {
 																		<td dir="ltr" align="center" class="left-right-inner-padding" style="padding: 30px 15px; text-align: left;">
 																			<div class="mktoText" id="leftText" mktoname="Left Adjusted Text">
 																			<h3 class="left mobile-center" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 23px; font-weight: 600; margin-bottom: 11px; color: #333e48; text-align: left;">What&nbsp;Businesses Want</h3>
-																				<p class="left mobile-center half-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; text-align: left; margin-bottom: 11px;">Organizations want a clear, up-to-date picture of their data so they can make informed business decisions. This means integrating data into a unified, actionable 360 view&#8212;whether it is a 360 view of customers, financial trading data, HR data, media content, or anything else.</p><p class="no-margin left mobile-center" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; text-align: left; margin-bottom: 0px;"><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;"><strong class="cta" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</strong></a></p>
+																			<p class="left mobile-center half-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; text-align: left; margin-bottom: 11px;">Organizations want a clear, up-to-date picture of their data so they can make informed business decisions. This means integrating data into a unified, actionable 360 view&#8212;whether it is a 360 view of customers, financial trading data, HR data, media content, or anything else.</p><p class="no-margin left mobile-center" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; text-align: left; margin-bottom: 0px;"><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</a></p>
 																			</div>
 																		</td>
 																	</tr>
@@ -635,7 +640,7 @@ li {
 																		<td align="center" class="feed-inner-padding" style="padding: 30px 15px 0 15px;">
 																			<div class="mktoText" id="one-column-block-text" mktoname="One Column Feed Content">
 																			<h3 style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 19px; line-height: 23px; font-weight: 600; margin-bottom: 11px; color: #333e48;">Advanced Encryption</h3>
-																				<p class="half-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 11px;">Protect data from cybersecurity threats using standards-based cryptography, advanced key management, and granular separation of duties.</p><p class="no-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 0px;"><a class="cta center mobile-center" href="http://www.marklogic.com/" style="text-align: center; text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;"><strong class="cta" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</strong></a></p>
+																			<p class="half-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 11px;">Protect data from cybersecurity threats using standards-based cryptography, advanced key management, and granular separation of duties.</p><p class="no-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 0px;"><a class="cta center mobile-center" href="http://www.marklogic.com/" style="text-align: center; text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</a></p>
 																			</div>
 																		</td>
 																	</tr>
@@ -687,7 +692,7 @@ li {
 																		<td align="center" class="feed-inner-padding" style="padding: 30px 15px 0 15px;">
 																			<div class="mktoText" id="two-col-left-content" mktoname="Left Content">
 																			<h3 style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 19px; line-height: 23px; font-weight: 600; margin-bottom: 11px; color: #333e48;">Element Level Security</h3>
-																				<p class="half-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 11px;">Hide specific parts of JSON and XML documents based on user roles, providing a granular level of control similar to "cell-level" security.</p><p class="no-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 0px;"><a class="cta center mobile-center" href="http://www.marklogic.com/" style="text-align: center; text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;"><strong class="cta" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</strong></a></p>
+																			<p class="half-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 11px;">Hide specific parts of JSON and XML documents based on user roles, providing a granular level of control similar to "cell-level" security.</p><p class="no-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 0px;"><a class="cta center mobile-center" href="http://www.marklogic.com/" style="text-align: center; text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</a></p>
 																			</div>
 																		</td>
 																	</tr>
@@ -721,7 +726,7 @@ li {
 																		<td align="center" class="feed-inner-padding" style="padding: 30px 15px 0 15px;">
 																			<div class="mktoText" id="two-col-right-content" mktoname="Right Content">
 																			<h3 style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 19px; line-height: 23px; font-weight: 600; margin-bottom: 11px; color: #333e48;">Redaction</h3>
-																				<p class="half-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 11px;">Remove or replace specific data, such as social security numbers, in order to prevent leakage of sensitive data when exporting data for sharing.</p><p class="no-margin center mobile-center" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; text-align: center; margin-bottom: 0px;"><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;"><strong class="cta" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</strong></a></p>
+																			<p class="half-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 11px;">Remove or replace specific data, such as social security numbers, in order to prevent leakage of sensitive data when exporting data for sharing.</p><p class="no-margin center mobile-center" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; text-align: center; margin-bottom: 0px;"><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</a></p>
 																			</div>
 																		</td>
 																	</tr>
@@ -761,6 +766,9 @@ li {
 																<table align="center" cellpadding="0" cellspacing="0">
 																	<tr>
 																		<td class="inner-padding" align="center" style="padding: 30px 15px; text-align: center;">
+																			<!-- Snippet Conditional Trigger ${showSnippet}
+																			<div class="mktoSnippet" id="unsubscribeFooter" mktoName="Unsubscribe Footer" mktoDefaultSnippetId="16"></div>
+																			<!-- End Snippet Conditional -->
 																			<div class="mktoText" id="left-aligned-body-editable" mktoname="Left Aligned Body Text">
 																			<h2 class="center no-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 25px; line-height: 30px; font-weight: 600; color: #333e48; text-align: center; margin-bottom: 0px;">Learn More About NoSQL</h2>
 																			
@@ -771,13 +779,13 @@ li {
 																			 <tr><td width="100%" style="width: 100%; line-height: 23px; font-size: 23px; width: 100%;">&nbsp;</td></tr>
 																			</table>
 																			<!-- End Horizontal Rule -->
-																				<p class="left" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; margin-bottom: 23px; font-weight: normal; color: #667078; text-align: left;">HealthCare.gov provides access to health coverage for millions of Americans - integrating dozens of data sources and handling <a class="inline" href="http://www.marklogic.com/" style="text-decoration: none; color: #464a99; font-weight: 500;"><strong class="inline" style="text-decoration: none; color: #464a99; font-weight: 500;">hundreds of thousands of concurrent users</strong></a>.</p>
+																				<p class="left" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; margin-bottom: 23px; font-weight: normal; color: #667078; text-align: left;">HealthCare.gov provides access to health coverage for millions of Americans - integrating dozens of data sources and handling <a class="inline" href="http://www.marklogic.com/" style="text-decoration: none; color: #464a99; font-weight: 500;">hundreds of thousands of concurrent users</a>.</p>
 																			<p class="left" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; margin-bottom: 23px; font-weight: normal; color: #667078; text-align: left;">Cosmic fugue shores of the cosmic ocean bits of moving fluff, preserve and cherish that pale blue dot. Quasar another world tingling of the spine tendrils of gossamer clouds made in the interiors of collapsing stars star stuff harvesting star light Hypatia tendrils of gossamer clouds rich in mystery, network of wormholes Sea of Tranquility.</p>
 																			<p class="left" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; margin-bottom: 23px; font-weight: normal; color: #667078; text-align: left;">From which we spring bits of moving fluff network of wormholes as a patch of light great turbulent clouds, of brilliant syntheses. Star stuff harvesting star light cosmic fugue gathered by gravity Drake Equation.</p>
 																			<ul style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: left; font-size: 14px; line-height: 23px; margin-bottom: 23px; font-weight: normal; color: #667078; Margin: 0 0 0 17px;">
-																				<li style="Margin: 0 0 23px 0; text-align: left;"><strong style="color: #4c5760;">Astonishment kindling</strong> the energy hidden in matter Apollonius of Perga something incredible is waiting to be known radio telescope Orion's sword the only home we've ever known.<br><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;"><strong class="cta" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</strong></a></li>
-																				<li style="Margin: 0 0 23px 0; text-align: left;"><strong style="color: #4c5760;">Rich in heavy atoms</strong> take root and flourish dispassionate extraterrestrial observer Rig Veda, kindling the energy hidden in matter science made in the interiors of collapsing stars dream of the mind's eye.<br><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;"><strong class="cta" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</strong></a></li>
-																				<li style="Margin: 0 0 23px 0; text-align: left;"><strong style="color: #4c5760;">Globular star cluster</strong> cosmic ocean! Culture. Consciousness? Sea of Tranquility billions upon billions paroxysm of global death tingling of the spine as a patch of light extraordinary claims require extraordinary evidence.<br><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;"><strong class="cta" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</strong></a></li>
+																				<li style="Margin: 0 0 23px 0; text-align: left;"><strong style="color: #4c5760;">Astonishment kindling</strong> the energy hidden in matter Apollonius of Perga something incredible is waiting to be known radio telescope Orion's sword the only home we've ever known.<br><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</a></li>
+																				<li style="Margin: 0 0 23px 0; text-align: left;"><strong style="color: #4c5760;">Rich in heavy atoms</strong> take root and flourish dispassionate extraterrestrial observer Rig Veda, kindling the energy hidden in matter science made in the interiors of collapsing stars dream of the mind's eye.<br><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</a></li>
+																				<li style="Margin: 0 0 23px 0; text-align: left;"><strong style="color: #4c5760;">Globular star cluster</strong> cosmic ocean! Culture. Consciousness? Sea of Tranquility billions upon billions paroxysm of global death tingling of the spine as a patch of light extraordinary claims require extraordinary evidence.<br><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</a></li>
 																			</ul>
 																			</div>
 																			<!-- Button Conditional Trigger ${showButton}
@@ -788,7 +796,7 @@ li {
                                             	<table border="0" cellspacing="0" cellpadding="0" align="center">
                                               	<tr>
                                                 	<td class="btn-container" align="center" bgcolor="${buttonFill}" style="-webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;">
-                                                  	<a href="${buttonLink}" target="_blank" style="color: ${buttonText}; border: 1px solid ${buttonBorder}; font-size: 12px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 4px; padding: 12px 22px; display: inline-block; text-transform:uppercase; font-weight:normal; letter-spacing: 1px;"><strong style="text-decoration:none; color: ${buttonText}; font-weight: normal;">${buttonCTA}</strong></a>
+                                                  	<a href="${buttonLink}" target="_blank" style="color: ${buttonText}; border: 1px solid ${buttonBorder}; font-size: 12px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 4px; padding: 12px 22px; display: inline-block; text-transform:uppercase; font-weight:normal; letter-spacing: 1px;">${buttonCTA}</a>
 																										<!--[if gt mso 15]><span style="margin:0; padding: 0; font-size: 1px; line-height: 1px; color:white;">&nbsp;</span><![endif]${showButton}
                                                   </td>
                                                 </tr>
@@ -839,7 +847,7 @@ li {
 																		<td class="inner-padding" align="center" style="padding: 30px 15px; text-align: center;">
 																			<div class="mktoText" id="center-aligned-body-editable" mktoname="Center Aligned Body Text">
 																			<h2 class="center" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 25px; line-height: 30px; font-weight: 600; margin-bottom: 23px; color: #333e48; text-align: center;">Learn More About NoSQL</h2>
-																				<p class="center" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; margin-bottom: 23px; font-weight: normal; color: #667078; text-align: center;">HealthCare.gov provides access to health coverage for millions of Americans - integrating dozens of data sources and handling <a class="inline" href="http://www.marklogic.com/" style="text-decoration: none; color: #464a99; font-weight: 500;"><strong class="inline" style="text-decoration: none; color: #464a99; font-weight: 500;">hundreds of thousands of concurrent users</strong></a>.</p>
+																			<p class="center" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; margin-bottom: 23px; font-weight: normal; color: #667078; text-align: center;">HealthCare.gov provides access to health coverage for millions of Americans - integrating dozens of data sources and handling <a class="inline" href="http://www.marklogic.com/" style="text-decoration: none; color: #464a99; font-weight: 500;">hundreds of thousands of concurrent users</a>.</p>
 																			<p class="center" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 23px; margin-bottom: 23px; font-weight: normal; color: #667078; text-align: center;">Cosmic fugue shores of the cosmic ocean bits of moving fluff, preserve and cherish that pale blue dot. Quasar another world tingling of the spine tendrils of gossamer clouds made in the interiors of collapsing stars star stuff harvesting star light Hypatia tendrils of gossamer clouds rich in mystery, network of wormholes Sea of Tranquility.</p>
 																			</div>
 																			<!-- Button Conditional Trigger ${showButton}
@@ -850,7 +858,7 @@ li {
                                             	<table border="0" cellspacing="0" cellpadding="0" align="center">
                                               	<tr>
                                                 	<td class="btn-container" align="center" bgcolor="${buttonFill}" style="-webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;">
-                                                  	<a href="${buttonLink}" target="_blank" style="color: ${buttonText}; border: 1px solid ${buttonBorder}; font-size: 12px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 4px; padding: 12px 22px; display: inline-block; text-transform:uppercase; font-weight:normal; letter-spacing: 1px;"><strong style="text-decoration:none; color: ${buttonText}; font-weight: normal;">${buttonCTA}</strong></a>
+                                                  	<a href="${buttonLink}" target="_blank" style="color: ${buttonText}; border: 1px solid ${buttonBorder}; font-size: 12px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 4px; padding: 12px 22px; display: inline-block; text-transform:uppercase; font-weight:normal; letter-spacing: 1px;">${buttonCTA}</a>
 																										<!--[if gt mso 15]><span style="margin:0; padding: 0; font-size: 1px; line-height: 1px; color:white;">&nbsp;</span><![endif]${showButton}
                                                   </td>
                                                 </tr>
@@ -912,7 +920,7 @@ li {
 																			<!-- End Horizontal Rule -->
 																			
 																			<p class="half-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 11px;">Astonishment kindling the energy hidden in matter Apollonius of Perga something incredible is waiting to be known radio telescope Orion's sword.</p>
-																				<p class="no-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 0px;"><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;"><strong class="cta" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</strong></a></p>
+																			<p class="no-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 0px;"><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</a></p>
 																			
 																			<!-- Horizontal Rule -->
 																			<table class="mobile-full" align="center" width="100%" valign="middle" cellpadding="0" cellspacing="0" style="width: 100%;">
@@ -923,7 +931,7 @@ li {
 																			<!-- End Horizontal Rule -->
 																			
 																			<p class="half-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 11px;">Rich in heavy atoms take root and flourish dispassionate extraterrestrial observer Rig Veda, kindling the energy hidden in matter science made.</p>
-																				<p class="no-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 0px;"><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;"><strong class="cta" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</strong></a></p>
+																			<p class="no-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 0px;"><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</a></p>
 																			
 																			<!-- Horizontal Rule -->
 																			<table class="mobile-full" align="center" width="100%" valign="middle" cellpadding="0" cellspacing="0" style="width: 100%;">
@@ -934,7 +942,7 @@ li {
 																			<!-- End Horizontal Rule -->
 																			
 																			<p class="half-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 11px;">Globular star cluster cosmic ocean! Culture. Consciousness? Sea of Tranquility billions upon billions paroxysm of global death tingling of the spine as a patch of light extraordinary claims require extraordinary evidence.</p>
-																				<p class="double-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 40px;"><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;"><strong class="cta" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</strong></a></p>
+																			<p class="double-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 23px; font-weight: normal; color: #667078; margin-bottom: 40px;"><a class="cta" href="http://www.marklogic.com/" style="text-decoration: none; color: #f13950; font-size: 12px; line-height: 16px; text-transform: uppercase; font-weight: 600;">Call to Action &rsaquo;</a></p>
 																			</div>
 																			<!-- Button Conditional Trigger ${showButton}
 																			<div class="mobile-center" style="display:inline-block; text-align: center;">
@@ -944,7 +952,7 @@ li {
                                             	<table border="0" cellspacing="0" cellpadding="0" align="center">
                                               	<tr>
                                                 	<td class="btn-container" align="center" bgcolor="${buttonFill}" style="-webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;">
-                                                  	<a href="${buttonLink}" target="_blank" style="color: ${buttonText}; border: 1px solid ${buttonBorder}; font-size: 12px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 4px; padding: 12px 22px; display: inline-block; text-transform:uppercase; font-weight:normal; letter-spacing: 1px;"><strong style="text-decoration:none; color: ${buttonText}; font-weight: normal;">${buttonCTA}</strong></a>
+                                                  	<a href="${buttonLink}" target="_blank" style="color: ${buttonText}; border: 1px solid ${buttonBorder}; font-size: 12px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 4px; padding: 12px 22px; display: inline-block; text-transform:uppercase; font-weight:normal; letter-spacing: 1px;">${buttonCTA}</a>
 																										<!--[if gt mso 15]><span style="margin:0; padding: 0; font-size: 1px; line-height: 1px; color:white;">&nbsp;</span><![endif]${showButton}
                                                   </td>
                                                 </tr>
@@ -1196,13 +1204,10 @@ li {
 													<table width="100%" cellpadding="0" cellspacing="0">
 														<tr>
 															<td align="center">
-																<p class="small" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 11px; line-height: 16px; margin-bottom: 16px; font-weight: normal; color: #7c868d;">&#169; 2018 MarkLogic Corporation.</p>
-																
-																<p class="small" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 11px; line-height: 16px; margin-bottom: 16px; font-weight: normal; color: #7c868d;">MARKLOGIC&#12392;MARKLOGIC&#12525;&#12468;&#12399;&#12289;MarkLogic Corporation &#21450;&#12403;&#12381;&#12398;&#31859;&#22269;&#20006;&#12403;&#12395;&#12381;&#12398;&#20182;&#12398;&#22269;&#12398;&#23376;&#20250;&#31038;&#12398;&#30331;&#37682;&#21830;&#27161;&#12391;&#12377;&#12290;MarkLogic&#174; &#12486;&#12463;&#12494;&#12525;&#12472;&#12540;&#12399;&#12289;&#31859;&#22269;&#29305;&#35377;&#30058;&#21495;7,756,858 B2&#12391;&#20445;&#35703;&#12373;&#12428;&#12390;&#12356;&#12414;&#12377;&#12290;&#12371;&#12398;&#38651;&#23376;&#12513;&#12540;&#12523;&#12399;999 Skyway Road, San Carlos CA 94070 USA &#12395;&#25152;&#22312;&#12377;&#12427;MarkLogic Corporation&#12392;&#12381;&#12398;&#23376;&#20250;&#31038;&#12420;&#38306;&#20418;&#20250;&#31038;&#65288;MarkLogic&#65289;&#12363;&#12425;&#12398;&#24195;&#21578;&#12513;&#12540;&#12523;&#12391;&#12377;&#12290;</p>
-																
-																<p class="small" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 11px; line-height: 16px; margin-bottom: 16px; font-weight: normal; color: #7c868d;">&#20170;&#24460;&#12289;MarkLogic&#12363;&#12425;&#12398;&#12513;&#12540;&#12523;&#12398;&#21463;&#38936;&#12434;&#24076;&#26395;&#12373;&#12428;&#12394;&#12356;&#22580;&#21512;&#12289;&#27425;&#12398;&#37197;&#20449;&#20572;&#27490;&#12508;&#12479;&#12531;&#12434;&#25276;&#19979;&#12375;&#12390;&#12367;&#12384;&#12373;&#12356;: <a href="http://info.marklogic.com/unsubscribepage-jp.html" style="text-decoration: none; color: #464a99;"><strong style="text-decoration: none; color: #464a99; font-weight: normal;">&#37197;&#20449;&#20572;&#27490;</strong></a></p>
-																
-																<p class="small" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 11px; line-height: 16px; margin-bottom: 16px; font-weight: normal; color: #7c868d;">MarkLogic&#12399;&#30342;&#27096;&#12398;&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12434;&#22823;&#20999;&#12395;&#12375;&#12414;&#12377;&#12290;<a href="http://jp.marklogic.com/privacy-policy/" style="text-decoration: none; color: #464a99;"><strong style="text-decoration: none; color: #464a99; font-weight: normal;">&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12509;&#12522;&#12471;&#12540;</strong></a></p>
+																<p class="small" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 11px; line-height: 16px; margin-bottom: 16px; font-weight: normal; color: #7c868d;">&#169; 2018 MarkLogic Corporation, 999 Skyway Road, San Carlos, CA 94070, USA. MarkLogic &#174; Technologie ist durch eines oder mehrere der folgenden US-Patente gesch&#252;tzt: 7,127,469, 7,171,404, 7,756,858, 7,962,474, 8,935,267, 8,892,599 und 9,092,507. MarkLogic und das MarkLogic Logo sind Marken oder eingetragene Marken der MarkLogic Corporation in den USA und anderen L&#228;ndern.
+</p>
+																<p class="small" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 11px; line-height: 16px; margin-bottom: 16px; font-weight: normal; color: #7c868d;">Dies ist eine Werbemitteilung von MarkLogic, seinen Partnern oder Vertretern.<br>Ihre Privatsph&#228;re ist uns wichtig: <a href="http://de.marklogic.com/privacy-policy/" style="text-decoration: none; color: #464a99;">Datenschutz</a> &#183; <a href="http://de.marklogic.com/imprint/" style="text-decoration: none; color: #464a99;">Impressum</a></p>
+																<p class="small" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-size: 11px; line-height: 16px; margin-bottom: 16px; font-weight: normal; color: #7c868d;">Wenn Sie keine E-Mails mehr von MarkLogic erhalten m&#246;chten, dann klicken Sie bitte hier: <a href="http://info.marklogic.com/unsubscribepage-de.html" style="text-decoration: none; color: #464a99;">unsubscribe</a>.</p>
 															</td>
 														</tr>
 													</table>

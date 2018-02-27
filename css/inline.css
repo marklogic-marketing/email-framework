@@ -63,7 +63,7 @@ h1 {
   text-align: center;
   font-size: 32px;
   line-height: 38px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 23px;
   color: #333e48; }
 
@@ -74,7 +74,7 @@ h2 {
   text-align: center;
   font-size: 25px;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 23px;
   color: #333e48; }
 
@@ -85,7 +85,7 @@ h3 {
   text-align: center;
   font-size: 19px;
   line-height: 23px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 11px;
   color: #333e48; }
 
@@ -120,12 +120,12 @@ p, ul {
     text-transform: uppercase;
     letter-spacing: 1px; }
 
-a.inline {
+a.inline, strong.inline {
   text-decoration: none;
   color: #464a99;
   font-weight: 500; }
 
-a.cta {
+a.cta, strong.cta {
   text-decoration: none;
   color: #f13950;
   font-size: 12px;
