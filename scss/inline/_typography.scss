@@ -4,6 +4,8 @@ $dark-text-gray: #4c5760;
 $text-gray: #667078;
 $light-text-gray: #7c868d;
 $text-purple: #43499c;
+$link-purple: #586ad6;
+$link-red: #f13950;
 
 @mixin font-default {
 	margin: 0;
@@ -78,17 +80,17 @@ a, strong {
 	
 	&.inline {
 		text-decoration: none;
-		color: #464a99;
-		font-weight: 500;
+		color: $link-purple;
+		font-weight: normal;
 	}
 	
 	&.cta {
 		text-decoration: none;
-		color: #f13950;
+		color: $link-red;
 		font-size: 12px;
 		line-height: 16px;
 		text-transform: uppercase;
-		font-weight: 600;
+		font-weight: bold;
 	}
 }
 	

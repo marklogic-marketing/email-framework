@@ -122,8 +122,8 @@ p, ul {
 
 a.inline, strong.inline {
   text-decoration: none;
-  color: #464a99;
-  font-weight: 500; }
+  color: #586ad6;
+  font-weight: normal; }
 
 a.cta, strong.cta {
   text-decoration: none;
@@ -131,7 +131,7 @@ a.cta, strong.cta {
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
-  font-weight: 600; }
+  font-weight: bold; }
 
 ul {
   padding: 0;
