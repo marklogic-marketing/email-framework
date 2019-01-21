@@ -7,7 +7,7 @@ var rename = require('gulp-rename');
 var options = { encodeSpecialChars: true }
 var builder = EmailBuilder(options);
 
-gulp.task('sass', function () {
+gulp.task('sass', function (done) {
     gulp.src('./scss/inline/inline.scss')
         .pipe(sass({
             includePaths: [
@@ -24,6 +24,7 @@ gulp.task('sass', function () {
             outputStyle: 'nested'
         }).on('error', sass.logError))
         .pipe(gulp.dest('./css/'));
+    done();
 });
 
 gulp.task('emailBuilder', function() {
@@ -36,9 +37,10 @@ gulp.task('emailBuilder', function() {
 });
 
 //Watch task
-gulp.task('default', ['sass', 'emailBuilder', 'watch']);
 
 gulp.task('watch',function() {
-    gulp.watch('scss/**/*.scss',['sass', 'emailBuilder']);
-    gulp.watch('html/*.html',['emailBuilder']);
+    gulp.watch('resources/scss/**/*.scss', gulp.series('sass', 'emailBuilder'));
+    gulp.watch('html/*.html', gulp.series('emailBuilder'));
 });
+
+gulp.task('default', gulp.series('sass', 'emailBuilder', 'watch'));
