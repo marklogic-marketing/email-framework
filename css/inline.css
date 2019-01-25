@@ -1,10 +1,21 @@
 .border-bottom {
   border-bottom: 1px solid #e5e5e5; }
 
+.header-border-mlw {
+  border-top: 1px solid #554690;
+  border-left: 1px solid #554690;
+  border-right: 1px solid #554690;
+}
+
 .body-border {
   border-left: 1px solid #e5e5e5;
   border-right: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5; }
+
+.body-border-mlw{
+  border-left: 1px solid #554690;
+  border-right: 1px solid #554690;
+  border-bottom: 1px solid #554690; }
 
 /* CSS Document */
 .btn-container {
