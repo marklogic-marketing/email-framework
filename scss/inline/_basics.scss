@@ -1,5 +1,6 @@
 
 $border-color: #e5e5e5;
+$mlw-border-color: #49555e;
 
 .border-bottom {
 	border-bottom: 1px solid $border-color;
@@ -9,4 +10,16 @@ $border-color: #e5e5e5;
 	border-left: 1px solid $border-color;
 	border-right: 1px solid $border-color;
 	border-bottom: 1px solid $border-color;
+}
+
+.header-border-mlw {
+    border-top: 1px solid $mlw-border-color;
+    border-left: 1px solid $mlw-border-color;
+    border-right: 1px solid $mlw-border-color;
+}
+
+.body-border-mlw {
+    border-left: 1px solid $mlw-border-color;
+    border-right: 1px solid $mlw-border-color;
+    border-bottom: 1px solid $mlw-border-color;
 }
