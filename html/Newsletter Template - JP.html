@@ -48,6 +48,12 @@
 	<meta class="mktoBoolean" id="showFeedImage" mktoName="Show Image?" default="true" true_value="-->" false_value="" true_value_name="YES" false_value_name="NO" mktoModuleScope="true">
 	<meta class="mktoImg" id="1ColFeedImage" mktoName="Image URL (255px width)" default="http://placehold.it/255x160" mktoModuleScope="true">
 	<meta class="mktoString" id="1ColFeedImageAlt" mktoName="Image Alt Code" default="MarkLogic" mktomodulescope="true">
+	
+	<!-- Header Image Module -->
+	<meta class="mktoColor" id="backupLineColor" mktoName="Backup Border Color" default="#cccccc" mktomodulescope="true">
+	<meta class="mktoNumber" id="borderOpacity" mktoName="Border Opacity" default="0.4" min="0" max="1" step="0.1" mktoModuleScope="true">
+	<meta class="mktoImg" id="headerBackgroundImage" mktoName="Header Background Image" default="https://info.marklogic.com/rs/371-XVQ-609/images/jp-newsletter-header.jpg" mktoModuleScope="true">
+	<meta class="mktoNumber" id="headerHeight" mktoName="Height of the Header Window" default="272" min="100" max="600" step="1" mktoModuleScope="true">
 
 	<!-- Image Background Hero Module -->
 	<meta class="mktoList" id="heroTextAlignment" mktoName="Vertical Text Alignment" values="top,middle,bottom" default="middle" mktomodulescope="true">
@@ -97,6 +103,7 @@
 	body, table, td, a { 
 		-webkit-text-size-adjust: 100%;
 		-ms-text-size-adjust: 100%;
+		word-wrap: break-word;
 	}
 	table, td {
 		mso-table-lspace: 0pt;
@@ -136,6 +143,15 @@ li {
  </o:OfficeDocumentSettings>
 </xml><![endif]-->
 
+<!-- Outlook JP Line Break Correction -->
+<!--[if mso 15]>
+<style>
+    body, table, td {
+        word-break: break-all;
+    }
+</style>
+<![endif]--> 
+	
 </head>
 <body>
 
@@ -220,10 +236,10 @@ li {
 											  <![endif]-->
 												<table align="center" cellpadding="0" cellspacing="0">
 													<tr>
-														<td align="center" background="${heroBackgroundImage}" bgcolor="${backupBackgroundColor}" width="600" height="${heroHeight}" valign="top" style="width: 600px; height: ${heroHeight}px; background-position:${heroBackgroundPosition};">
+														<td align="center" background="${headerBackgroundImage}" bgcolor="${backupBackgroundColor}" width="600" height="${headerHeight}" valign="top" style="width: 600px; height: ${headerHeight}px; background-position:${heroBackgroundPosition};">
 															<!--[if gte mso 9]>
-															<v:image xmlns:v="urn:schemas-microsoft-com:vml" id="theImage" style="behavior: url(#default#VML); align:center; vertical-align: middle; display: inline-block; position: absolute; width: 600px; height: ${heroHeight}px; top: 0; left: 0; border: 0; z-index: 1;" src="${heroBackgroundImage}" /> 
-															<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="display: inline-block; position: absolute; width: 600px; height: ${heroHeight}px; top: 0; left: 0; border: 0; z-index: 2;">
+															<v:image xmlns:v="urn:schemas-microsoft-com:vml" id="theImage" style="behavior: url(#default#VML); align:center; vertical-align: middle; display: inline-block; position: absolute; width: 600px; height: ${headerHeight}px; top: 0; left: 0; border: 0; z-index: 1;" src="${headerBackgroundImage}" /> 
+															<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="display: inline-block; position: absolute; width: 600px; height: ${headerHeight}px; top: 0; left: 0; border: 0; z-index: 2;">
 															<v:fill opacity="0%" style="z-index: 1;"/> 
 															<div>               
 															<![endif]--> 
@@ -233,10 +249,10 @@ li {
 																<td valign="top" align="center">
 																			<table width="100%" cellpadding="0" cellspacing="0">
 																				<tr>
-																					<td class="mobile-center" height="${heroHeight}" align="center" style="height: ${heroHeight}px; text-align:center;">
-																					  <table width="100%" height="${heroHeight}" cellpadding="0" cellspacing="0" style="height: ${heroHeight}px;">
+																					<td class="mobile-center" height="${headerHeight}" align="center" style="height: ${headerHeight}px; text-align:center;">
+																					  <table width="100%" height="${headerHeight}" cellpadding="0" cellspacing="0" style="height: ${headerHeight}px;">
 																						<tr>
-																							<td valign="top" width="100%" height="${heroHeight}" style="height: ${heroHeight};">
+																							<td valign="top" width="100%" height="${headerHeight}" style="height: ${headerHeight};">
 																								
 																								<table align="center" cellpadding="0" cellspacing="0" >
 																									<tr>
@@ -253,9 +269,9 @@ li {
 																															<!--[if gt mso 15]><p style="margin:0; padding: 0; font-size: 1px; line-height: 1px; color:white;">&nbsp;</p><![endif]-->
 																														</a>
 																													</strong></td>
-																													<td width="330" style="vertical-align: bottom;">
+																													<td width="330" style="vertical-align: bottom; height: 26px;" >
 																														<div class="mktoText" id="headerLabelText" mktoName="Background Image Hero Text">
-																														<p class="white lead no-margin" style="font-size: 16px; letter-spacing: 1px; line-height: 18px;"><strong class="white">MarkLogic ニュースレター</strong></p>
+																														<p class="white lead no-margin" style="font-size: 16px; letter-spacing: 1px; line-height: 16px;"><strong class="white">MarkLogic ニュースレター</strong></p>
 																														</div>
 																													</td>
 																												</tr>
@@ -267,7 +283,7 @@ li {
 																										</td>
 																									</tr>
 																									<tr>
-																										<td width="570" align="center" style="font-size: 1px; line-height: 1px; height: 1px; width: 570px; background: rgba(255,255,255,0.4);">&nbsp;
+																										<td width="570" align="center" style="font-size: 1px; line-height: 1px; height: 1px; width: 570px; border-bottom: 1px solid ${backupLineColor}; border-bottom: 1px solid rgba(255,255,255,${borderOpacity});">&nbsp;
 																										</td>
 																									</tr>
 																								</table>
@@ -1358,11 +1374,8 @@ li {
                                                                     <td align="center" valign="top" width="100%" style="width:100%;">
                                                                     <![endif]-->
 																<div class="mktoText" id="footer-text" mktoName="Footer Text">
-																	  <p class="small" style="text-align:left;">© 2018 MarkLogic Corporation.</p>
-																    <p class="small" style="text-align:left;">MARKLOGICとMARKLOGICロゴは、MarkLogic Corporation 及びその米国並びにその他の国の子会社の登録商標です。MarkLogic® テクノロジーは、米国特許番号7,756,858 B2で保護されています。この電子メールは999 Skyway Road, San Carlos CA 94070 USA に所在するMarkLogic Corporationとその子会社や関係会社（MarkLogic）からの広告メールです。</p>
-																    <p class="small" style="text-align:left;">© 2019 MarkLogic Corporation. MarkLogic and the MarkLogic logo are trademarks of MarkLogic Corporation.</p>
-																		<p class="small" style="text-align:left;">今後、MarkLogicからのメールの受領を希望されない場合、次の配信停止ボタンを押下してください: <a href="http://info.marklogic.com/unsubscribepage-jp.html" style="text-decoration: underline; color: #b5bbbf;"><strong style="text-decoration: inherit; color: #b5bbbf; font-weight: normal;">配信停止</strong></a></p>
-																		<p class="small" style="text-align:left;">MarkLogicは皆様のプライバシーを大切にします。<a href="http://jp.marklogic.com/privacy-policy/" style="text-decoration: underline; color: #b5bbbf;"><strong style="text-decoration: inherit; color: #b5bbbf; font-weight: normal;">プライバシーポリシー</strong></a>.</p>
+																	  <p class="small" style="text-align:left;">&copy; 2019 MarkLogic Corporation. MARKLOGICとMARKLOGICロゴは、MarkLogic Corporation 及びその米国並びにその他の国の子会社の登録商標です。この電子メールは999 Skyway Road, San Carlos CA 94070 USA に所在するMarkLogic Corporationとその子会社や関係会社（MarkLogic）からの広告メールです。3742712</p>
+																		<p class="small" style="text-align:left;">マークロジックは、当社の<a href="https://jp.marklogic.com/privacy/" style="text-decoration: underline; color: #b5bbbf;"><strong style="text-decoration: inherit; color: #b5bbbf; font-weight: normal;">プライバシーステートメント</strong></a>に準拠してお客様の個人情報を処理することをお約束します。個人情報の扱いについては透明性をもって通知させていただきます。今後、MarkLogicからのメールの受領を希望されない場合、次の配信停止ボタンを押下してください: <a href="https://info.marklogic.com/unsubscribepage-jp.html" style="text-decoration: underline; color: #b5bbbf;"><strong style="text-decoration: inherit; color: #b5bbbf; font-weight: normal;">配信停止</strong></a></p>
 																</div>
                                                                     <!--[if (gte mso 9)|(IE)]>
                                                                     </td>

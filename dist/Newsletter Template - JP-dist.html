@@ -46,6 +46,12 @@
 	<meta class="mktoBoolean" id="showFeedImage" mktoname="Show Image?" default="true" true_value="-->" false_value="" true_value_name="YES" false_value_name="NO" mktomodulescope="true">
 	<meta class="mktoImg" id="1ColFeedImage" mktoname="Image URL (255px width)" default="http://placehold.it/255x160" mktomodulescope="true">
 	<meta class="mktoString" id="1ColFeedImageAlt" mktoname="Image Alt Code" default="MarkLogic" mktomodulescope="true">
+	
+	<!-- Header Image Module -->
+	<meta class="mktoColor" id="backupLineColor" mktoname="Backup Border Color" default="#cccccc" mktomodulescope="true">
+	<meta class="mktoNumber" id="borderOpacity" mktoname="Border Opacity" default="0.4" min="0" max="1" step="0.1" mktomodulescope="true">
+	<meta class="mktoImg" id="headerBackgroundImage" mktoname="Header Background Image" default="https://info.marklogic.com/rs/371-XVQ-609/images/jp-newsletter-header.jpg" mktomodulescope="true">
+	<meta class="mktoNumber" id="headerHeight" mktoname="Height of the Header Window" default="272" min="100" max="600" step="1" mktomodulescope="true">
 
 	<!-- Image Background Hero Module -->
 	<meta class="mktoList" id="heroTextAlignment" mktoname="Vertical Text Alignment" values="top,middle,bottom" default="middle" mktomodulescope="true">
@@ -138,6 +144,7 @@ div[class~="aolmail_desktop-hide"]{
 	body, table, td, a { 
 		-webkit-text-size-adjust: 100%;
 		-ms-text-size-adjust: 100%;
+		word-wrap: break-word;
 	}
 	table, td {
 		mso-table-lspace: 0pt;
@@ -177,6 +184,15 @@ li {
  </o:OfficeDocumentSettings>
 </xml><![endif]-->
 
+<!-- Outlook JP Line Break Correction -->
+<!--[if mso 15]>
+<style>
+    body, table, td {
+        word-break: break-all;
+    }
+</style>
+<![endif]--> 
+	
 </head>
 <body>
 
@@ -261,10 +277,10 @@ li {
 											  <![endif]-->
 												<table align="center" cellpadding="0" cellspacing="0">
 													<tr>
-														<td align="center" background="${heroBackgroundImage}" bgcolor="${backupBackgroundColor}" width="600" height="${heroHeight}" valign="top" style="width: 600px; height: ${heroHeight}px; background-position:${heroBackgroundPosition};">
+														<td align="center" background="${headerBackgroundImage}" bgcolor="${backupBackgroundColor}" width="600" height="${headerHeight}" valign="top" style="width: 600px; height: ${headerHeight}px; background-position:${heroBackgroundPosition};">
 															<!--[if gte mso 9]>
-															<v:image xmlns:v="urn:schemas-microsoft-com:vml" id="theImage" style="behavior: url(#default#VML); align:center; vertical-align: middle; display: inline-block; position: absolute; width: 600px; height: ${heroHeight}px; top: 0; left: 0; border: 0; z-index: 1;" src="${heroBackgroundImage}" /> 
-															<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="display: inline-block; position: absolute; width: 600px; height: ${heroHeight}px; top: 0; left: 0; border: 0; z-index: 2;">
+															<v:image xmlns:v="urn:schemas-microsoft-com:vml" id="theImage" style="behavior: url(#default#VML); align:center; vertical-align: middle; display: inline-block; position: absolute; width: 600px; height: ${headerHeight}px; top: 0; left: 0; border: 0; z-index: 1;" src="${headerBackgroundImage}" /> 
+															<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="display: inline-block; position: absolute; width: 600px; height: ${headerHeight}px; top: 0; left: 0; border: 0; z-index: 2;">
 															<v:fill opacity="0%" style="z-index: 1;"/> 
 															<div>               
 															<![endif]--> 
@@ -274,10 +290,10 @@ li {
 																<td valign="top" align="center">
 																			<table width="100%" cellpadding="0" cellspacing="0">
 																				<tr>
-																					<td class="mobile-center" height="${heroHeight}" align="center" style="height: ${heroHeight}px; text-align:center;">
-																					  <table width="100%" height="${heroHeight}" cellpadding="0" cellspacing="0" style="height: ${heroHeight}px;">
+																					<td class="mobile-center" height="${headerHeight}" align="center" style="height: ${headerHeight}px; text-align:center;">
+																					  <table width="100%" height="${headerHeight}" cellpadding="0" cellspacing="0" style="height: ${headerHeight}px;">
 																						<tr>
-																							<td valign="top" width="100%" height="${heroHeight}" style="height: ${heroHeight};">
+																							<td valign="top" width="100%" height="${headerHeight}" style="height: ${headerHeight};">
 																								
 																								<table align="center" cellpadding="0" cellspacing="0">
 																									<tr>
@@ -294,9 +310,9 @@ li {
 																															<!--[if gt mso 15]><p style="margin:0; padding: 0; font-size: 1px; line-height: 1px; color:white;">&nbsp;</p><![endif]-->
 																														</a>
 																													</strong></td>
-																													<td width="330" style="vertical-align: bottom;">
+																													<td width="330" style="vertical-align: bottom; height: 26px;">
 																														<div class="mktoText" id="headerLabelText" mktoname="Background Image Hero Text">
-																														<p class="white lead no-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-weight: 300; font-size: 16px; letter-spacing: 1px; line-height: 18px; color: #ffffff; margin-bottom: 0px;"><strong class="white" style="color: #ffffff;">MarkLogic &#12491;&#12517;&#12540;&#12473;&#12524;&#12479;&#12540;</strong></p>
+																														<p class="white lead no-margin" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; text-align: center; font-weight: 300; font-size: 16px; letter-spacing: 1px; line-height: 16px; color: #ffffff; margin-bottom: 0px;"><strong class="white" style="color: #ffffff;">MarkLogic &#12491;&#12517;&#12540;&#12473;&#12524;&#12479;&#12540;</strong></p>
 																														</div>
 																													</td>
 																												</tr>
@@ -308,7 +324,7 @@ li {
 																										</td>
 																									</tr>
 																									<tr>
-																										<td width="570" align="center" style="font-size: 1px; line-height: 1px; height: 1px; width: 570px; background: rgba(255,255,255,0.4);">&nbsp;
+																										<td width="570" align="center" style="font-size: 1px; line-height: 1px; height: 1px; width: 570px; border-bottom: 1px solid ${backupLineColor}; border-bottom: 1px solid rgba(255,255,255,${borderOpacity});">&nbsp;
 																										</td>
 																									</tr>
 																								</table>
@@ -1399,11 +1415,8 @@ li {
                                                                     <td align="center" valign="top" width="100%" style="width:100%;">
                                                                     <![endif]-->
 																<div class="mktoText" id="footer-text" mktoname="Footer Text">
-																	  <p class="small" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 16px; margin-bottom: 16px; font-weight: normal; color: #7c868d; text-align: left;">&#169; 2018 MarkLogic Corporation.</p>
-																    <p class="small" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 16px; margin-bottom: 16px; font-weight: normal; color: #7c868d; text-align: left;">MARKLOGIC&#12392;MARKLOGIC&#12525;&#12468;&#12399;&#12289;MarkLogic Corporation &#21450;&#12403;&#12381;&#12398;&#31859;&#22269;&#20006;&#12403;&#12395;&#12381;&#12398;&#20182;&#12398;&#22269;&#12398;&#23376;&#20250;&#31038;&#12398;&#30331;&#37682;&#21830;&#27161;&#12391;&#12377;&#12290;MarkLogic&#174; &#12486;&#12463;&#12494;&#12525;&#12472;&#12540;&#12399;&#12289;&#31859;&#22269;&#29305;&#35377;&#30058;&#21495;7,756,858 B2&#12391;&#20445;&#35703;&#12373;&#12428;&#12390;&#12356;&#12414;&#12377;&#12290;&#12371;&#12398;&#38651;&#23376;&#12513;&#12540;&#12523;&#12399;999 Skyway Road, San Carlos CA 94070 USA &#12395;&#25152;&#22312;&#12377;&#12427;MarkLogic Corporation&#12392;&#12381;&#12398;&#23376;&#20250;&#31038;&#12420;&#38306;&#20418;&#20250;&#31038;&#65288;MarkLogic&#65289;&#12363;&#12425;&#12398;&#24195;&#21578;&#12513;&#12540;&#12523;&#12391;&#12377;&#12290;</p>
-																    <p class="small" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 16px; margin-bottom: 16px; font-weight: normal; color: #7c868d; text-align: left;">&#169; 2019 MarkLogic Corporation. MarkLogic and the MarkLogic logo are trademarks of MarkLogic&#160;Corporation.</p>
-																		<p class="small" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 16px; margin-bottom: 16px; font-weight: normal; color: #7c868d; text-align: left;">&#20170;&#24460;&#12289;MarkLogic&#12363;&#12425;&#12398;&#12513;&#12540;&#12523;&#12398;&#21463;&#38936;&#12434;&#24076;&#26395;&#12373;&#12428;&#12394;&#12356;&#22580;&#21512;&#12289;&#27425;&#12398;&#37197;&#20449;&#20572;&#27490;&#12508;&#12479;&#12531;&#12434;&#25276;&#19979;&#12375;&#12390;&#12367;&#12384;&#12373;&#12356;: <a href="http://info.marklogic.com/unsubscribepage-jp.html" style="text-decoration: underline; color: #b5bbbf;"><strong style="text-decoration: inherit; color: #b5bbbf; font-weight: normal;">&#37197;&#20449;&#20572;&#27490;</strong></a></p>
-																		<p class="small" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 16px; margin-bottom: 16px; font-weight: normal; color: #7c868d; text-align: left;">MarkLogic&#12399;&#30342;&#27096;&#12398;&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12434;&#22823;&#20999;&#12395;&#12375;&#12414;&#12377;&#12290;<a href="http://jp.marklogic.com/privacy-policy/" style="text-decoration: underline; color: #b5bbbf;"><strong style="text-decoration: inherit; color: #b5bbbf; font-weight: normal;">&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12509;&#12522;&#12471;&#12540;</strong></a>.</p>
+																	  <p class="small" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 16px; margin-bottom: 16px; font-weight: normal; color: #7c868d; text-align: left;">&copy; 2019 MarkLogic Corporation. MARKLOGIC&#12392;MARKLOGIC&#12525;&#12468;&#12399;&#12289;MarkLogic Corporation &#21450;&#12403;&#12381;&#12398;&#31859;&#22269;&#20006;&#12403;&#12395;&#12381;&#12398;&#20182;&#12398;&#22269;&#12398;&#23376;&#20250;&#31038;&#12398;&#30331;&#37682;&#21830;&#27161;&#12391;&#12377;&#12290;&#12371;&#12398;&#38651;&#23376;&#12513;&#12540;&#12523;&#12399;999 Skyway Road, San Carlos CA 94070 USA &#12395;&#25152;&#22312;&#12377;&#12427;MarkLogic Corporation&#12392;&#12381;&#12398;&#23376;&#20250;&#31038;&#12420;&#38306;&#20418;&#20250;&#31038;&#65288;MarkLogic&#65289;&#12363;&#12425;&#12398;&#24195;&#21578;&#12513;&#12540;&#12523;&#12391;&#12377;&#12290;3742712</p>
+																		<p class="small" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 16px; margin-bottom: 16px; font-weight: normal; color: #7c868d; text-align: left;">&#12510;&#12540;&#12463;&#12525;&#12472;&#12483;&#12463;&#12399;&#12289;&#24403;&#31038;&#12398;<a href="https://jp.marklogic.com/privacy/" style="text-decoration: underline; color: #b5bbbf;"><strong style="text-decoration: inherit; color: #b5bbbf; font-weight: normal;">&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12473;&#12486;&#12540;&#12488;&#12513;&#12531;&#12488;</strong></a>&#12395;&#28310;&#25312;&#12375;&#12390;&#12362;&#23458;&#27096;&#12398;&#20491;&#20154;&#24773;&#22577;&#12434;&#20966;&#29702;&#12377;&#12427;&#12371;&#12392;&#12434;&#12362;&#32004;&#26463;&#12375;&#12414;&#12377;&#12290;&#20491;&#20154;&#24773;&#22577;&#12398;&#25201;&#12356;&#12395;&#12388;&#12356;&#12390;&#12399;&#36879;&#26126;&#24615;&#12434;&#12418;&#12387;&#12390;&#36890;&#30693;&#12373;&#12379;&#12390;&#12356;&#12383;&#12384;&#12365;&#12414;&#12377;&#12290;&#20170;&#24460;&#12289;MarkLogic&#12363;&#12425;&#12398;&#12513;&#12540;&#12523;&#12398;&#21463;&#38936;&#12434;&#24076;&#26395;&#12373;&#12428;&#12394;&#12356;&#22580;&#21512;&#12289;&#27425;&#12398;&#37197;&#20449;&#20572;&#27490;&#12508;&#12479;&#12531;&#12434;&#25276;&#19979;&#12375;&#12390;&#12367;&#12384;&#12373;&#12356;: <a href="https://info.marklogic.com/unsubscribepage-jp.html" style="text-decoration: underline; color: #b5bbbf;"><strong style="text-decoration: inherit; color: #b5bbbf; font-weight: normal;">&#37197;&#20449;&#20572;&#27490;</strong></a></p>
 																</div>
                                                                     <!--[if (gte mso 9)|(IE)]>
                                                                     </td>
