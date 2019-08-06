@@ -1,0 +1,42 @@
+/* CSS Document */
+
+$std-h-padding: 15px;
+$std-v-padding: 30px;
+
+.outer-padding {
+	padding-left: $std-h-padding;
+	padding-right: $std-h-padding;
+}
+
+.inner-padding {
+	padding: $std-v-padding $std-h-padding;
+}
+
+/* Media Query in Embedded Folder */
+.left-right-inner-padding {
+	padding: 0 $std-h-padding;
+}
+
+.feed-inner-padding {
+	padding: $std-v-padding $std-h-padding 0 $std-h-padding;
+}
+
+.no-margin {
+	margin-bottom: 0px !important;
+}
+
+.half-margin {
+	margin-bottom: 11px;
+}
+
+.quarter-margin {
+	margin-bottom: 6px;
+}
+
+p.lead-btn-margin {
+	margin-bottom: 30px;
+}
+
+.double-margin {
+	margin-bottom: 40px;
+}

@@ -8,7 +8,7 @@ var options = { encodeSpecialChars: true }
 var builder = EmailBuilder(options);
 
 gulp.task('sass', function (done) {
-    gulp.src('./scss/inline/*.scss')
+    gulp.src('./scss/inline/inline.scss')
         .pipe(sass({
             includePaths: [
                 './scss/inline'
